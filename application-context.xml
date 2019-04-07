@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="robot" class="com.aw.beans.Robot" autowire="byType" />
+
+	<bean id="microprocessor1" class="com.aw.beans.Microprocessor">
+		<property name="id" value="344" />
+		<property name="microType" value="32bit-cylindrical" />
+		<property name="microName" value="Doraemon" />
+		<property name="color" value="Blue" />
+	</bean>
+	<bean id="microprocessor" class="com.aw.beans.Microprocessor" autowire-candidate="false">
+		<property name="id" value="345" />
+		<property name="microType" value="32bit-cylindrical" />
+		<property name="microName" value="Doraemon" />
+		<property name="color" value="Blue" />
+	</bean>
+
+
+	<bean id="sensor1" class="com.aw.beans.Sensor">
+		<property name="id" value="345"></property>
+		<property name="sensorType" value="64bit-Articulated" />
+		<property name="sensorName" value="Tachikomas" />
+		<property name="color" value="Yellow" />
+	</bean>
+
+</beans>
